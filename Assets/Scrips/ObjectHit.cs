@@ -7,6 +7,7 @@ public class ObjectHit : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other) 
     {
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Player")
         {
             gameObject.tag = "GotHit";
