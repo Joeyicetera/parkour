@@ -16,9 +16,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float airMultiplier;
     private bool readyToJump = true;
 
-    [Header("Keybinds")]
-    [SerializeField] private KeyCode jumpkey = KeyCode.Space;
-
     [Header("Ground Check")]
     [SerializeField] private float playerHeight;
     [SerializeField] private LayerMask groundLayer;
@@ -28,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
+    private float jumpInput;
     private Vector3 moveDir;
     private Rigidbody rigidbody;
 
@@ -69,8 +67,9 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
+        jumpInput = Input.GetAxis("Jump");
 
-        if (Input.GetKey(jumpkey) && readyToJump && grounded)
+        if (jumpInput == 1f && readyToJump && grounded)
         {
             readyToJump = false;
             Jump();
