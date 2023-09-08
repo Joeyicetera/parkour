@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GotHit
   - Hitable
+  - Coin
   layers:
   - Default
   - TransparentFX

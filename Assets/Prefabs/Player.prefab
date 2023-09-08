@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1382510278616815169}
   - component: {fileID: 3807769451169445140}
   - component: {fileID: 6703057441719579845}
+  - component: {fileID: 741888184268957517}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -107,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  coin: 0
 --- !u!114 &6703057441719579845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,15 +123,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   groundDrag: 4
-  jumpForce: 6
+  jumpForce: 8
   jumpCooldown: 0.25
   airMultiplier: 0.4
-  jumpkey: 32
   playerHeight: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 5572903943754351558}
+--- !u!136 &741888184268957517
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9072284663565172412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6057575550201585064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5375498366585376705, guid: 0a61e79c32e175a4395857df3ada04a0, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8498949941150410110, guid: 0a61e79c32e175a4395857df3ada04a0, type: 3}
       propertyPath: m_LocalPosition.x
