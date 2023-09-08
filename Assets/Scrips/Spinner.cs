@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Spinner : MonoBehaviour
 {
-    private float SpinSpeed = 1;
-    [SerializeField] float SpinSpeedModifier = 150;
+    private float SpinSpeed;
+    [SerializeField] private float SpinSpeedModifier = 150;
 
     // Start is called before the first frame update
     void Start()

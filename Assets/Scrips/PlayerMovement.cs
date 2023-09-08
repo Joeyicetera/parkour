@@ -7,29 +7,29 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    [SerializeField] private float moveSpeed;
 
-    public float groundDrag;
+    [SerializeField] private float groundDrag;
 
-    public float jumpForce;
-    public float jumpCooldown;
-    public float airMultiplier;
-    bool readyToJump = true;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float jumpCooldown;
+    [SerializeField] private float airMultiplier;
+    private bool readyToJump = true;
 
     [Header("Keybinds")]
-    public KeyCode jumpkey = KeyCode.Space;
+    [SerializeField] private KeyCode jumpkey = KeyCode.Space;
 
     [Header("Ground Check")]
-    public float playerHeight;
-    public LayerMask groundLayer;
-    bool grounded;
+    [SerializeField] private float playerHeight;
+    [SerializeField] private LayerMask groundLayer;
+    private bool grounded;
 
-    public Transform orientation;
+    [SerializeField] private Transform orientation;
 
-    float horizontalInput;
-    float verticalInput;
-    Vector3 moveDir;
-    Rigidbody rigidbody;
+    private float horizontalInput;
+    private float verticalInput;
+    private Vector3 moveDir;
+    private Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
